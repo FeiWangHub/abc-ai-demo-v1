@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-const StyledAppBar = styled(AppBar)(({ theme }) => ({
+const StyledAppBar = styled(AppBar)(() => ({
   background: 'rgba(10, 10, 10, 0.8)',
   backdropFilter: 'blur(10px)',
   borderBottom: '1px solid rgba(0, 212, 255, 0.3)',
@@ -18,7 +18,7 @@ const NavButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const Logo = styled(Typography)(({ theme }) => ({
+const Logo = styled(Typography)(() => ({
   fontWeight: 800,
   letterSpacing: '0.1em',
   background: 'linear-gradient(45deg, #00D4FF 30%, #9D4EDD 90%)',
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     <StyledAppBar position="fixed">
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <Logo variant="h6" component="div" onClick={() => scrollToSection('hero')}>
+          <Logo variant="h6" onClick={() => scrollToSection('hero')}>
             ABC AI COMMUNITY
           </Logo>
           <Box sx={{ flexGrow: 1 }} />
